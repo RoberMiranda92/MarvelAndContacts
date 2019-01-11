@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+    <com.verse.app.verseapp.components.AvatarView
+            android:id="@+id/av_contact_image"
+            android:layout_centerVertical="true"
+            android:layout_width="60dp"
+            style="@style/AvatarStyle"
+            android:layout_height="60dp"/>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="vertical"
+                  android:layout_centerVertical="true"
+                  android:layout_marginStart="10dp"
+                  android:layout_toEndOf="@+id/av_contact_image"
+                  android:layout_height="wrap_content">
+
+        <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_contact_name"
+                style="@style/Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+        />
+
+
+        <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_contact_phone"
+                style="@style/SubtitleTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+        />
+
+
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_ammount"
+            style="@style/AmountSmall"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_height="wrap_content"/>
+
+</RelativeLayout>

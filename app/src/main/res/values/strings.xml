@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Verse-App</string>
+
+    <!--Main Activity -->
+    <string name="verse_splitprocess_title">Split</string>
+    <string name="verse_splitprocess_select_title">Select Contacts</string>
+    <string name="verse_splitprocess_import_title">Select Import</string>
+    <string name="verse_splitprocess_resume_title">Split %.2f</string>
+
+    <string name="verse_splitprocess_button_split_between">Split between %d</string>
+    <string name="verse_splitprocess_button_split_money">Split %s</string>
+
+
+
+    <string name="error_dialog_title">Woops…</string>
+    <string name="error_dialog_subtitle">Someone has broken something</string>
+    <string name="accept">OK</string>
+
+</resources>

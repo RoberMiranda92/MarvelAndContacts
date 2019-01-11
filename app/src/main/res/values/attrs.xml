@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="AvatarView">
+        <attr name="avatar_border_color" format="reference" />
+        <attr name="avatar_border_width" format="dimension" />
+        <attr name="avatar_size" format="dimension" />
+
+        <attr name="avatar_shape">
+            <enum name="circle" value="0" />
+            <enum name="rectangle" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>

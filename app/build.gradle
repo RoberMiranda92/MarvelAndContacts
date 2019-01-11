@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.verse.app.verse_app"
+        minSdkVersion 24
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+
+        demo {
+            initWith debug
+            buildConfigField "String", "SERVER_URL", "\"https://gateway.marvel.com/v1/public/\""
+            buildConfigField "String", "PUBLIC_KEY", "\"0e469aac93ed81b266b2d4cd94288006\""
+            buildConfigField "String", "PRIVATE_KEY", "\"a7625563d4fcb27e849b584104e554e49fde8d87\""
+        }
+
+        debug {
+            debuggable = true
+            buildConfigField "String", "SERVER_URL", "\"https://gateway.marvel.com/v1/public/\""
+            buildConfigField "String", "PUBLIC_KEY", "\"0e469aac93ed81b266b2d4cd94288006\""
+            buildConfigField "String", "PRIVATE_KEY", "\"a7625563d4fcb27e849b584104e554e49fde8d87\""
+
+        }
+        release {
+            debuggable = false
+            buildConfigField "String", "SERVER_URL", "\"https://gateway.marvel.com/v1/public/\""
+            buildConfigField "String", "PUBLIC_KEY", "\"0e469aac93ed81b266b2d4cd94288006\""
+            buildConfigField "String", "PRIVATE_KEY", "\"a7625563d4fcb27e849b584104e554e49fde8d87\""
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //Android
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "com.android.support:appcompat-v7:$rootProject.ext.support_version"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation "com.android.support:design:$rootProject.ext.support_version"
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    // Koin for Android
+    implementation "org.koin:koin-android:$rootProject.ext.koin_version"
+    // RetroFit
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.ext.retroFit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$rootProject.ext.retroFit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.ext.retroFit_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.okhttp_version"
+
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.ext.rxjava_version"
+
+    implementation "com.airbnb.android:lottie:$rootProject.ext.lottie_version"
+
+    implementation "com.github.bumptech.glide:glide:$rootProject.ext.glideVersion"
+    kapt "com.github.bumptech.glide:compiler:$rootProject.ext.glideVersion"
+
+}

@@ -1,0 +1,71 @@
+<resources>
+
+
+    <style name="MainTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/fontColorPrimary</item>
+        <item name="android:textColorSecondary">@color/fontColorSecondary</item>
+        <item name="android:windowBackground">@color/backgroundColor</item>
+    </style>
+
+    <style name="MainTheme.NoActionBar" parent="MainTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <style name="TransparentDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:windowBackground">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="ContactItemStyle">
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Title">
+        <item name="android:textSize">17dp</item>
+        <item name="android:textColor">@color/fontColorPrimary</item>
+    </style>
+
+    <style name="SubtitleTitle" parent="Title">
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/fontColorSecondary</item>
+
+    </style>
+
+    <style name="MainButton" parent="Base.Widget.AppCompat.Button">
+        <item name="android:background">@color/colorAccent</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Toolbar" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:elevation">6dp</item>
+        <item name="android:textColorPrimary">@color/fontColorPrimary</item>
+    </style>
+
+    <style name="AvatarStyle">
+        <item name="avatar_border_color">@color/colorAccent</item>
+        <item name="avatar_border_width">2dp</item>
+        <item name="avatar_shape">circle</item>
+    </style>
+
+    <style name="AmountBig">
+        <item name="android:textSize">30dp</item>
+        <item name="android:textColor">@color/fontColorPrimary</item>
+    </style>
+    <style name="AmountSmall" parent="AmountBig">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">17dp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView android:layout_width="match_parent"
+                                                android:layout_height="match_parent">
+        <FrameLayout android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+            <android.support.v7.widget.AppCompatEditText
+                    android:layout_width="wrap_content"
+                    android:id="@+id/et_amount"
+                    android:inputType="numberDecimal"
+                    android:layout_gravity="center_horizontal"
+                    android:text="0.00"
+                    android:gravity="center"
+                    android:ems="7"
+                    style="@style/AmountBig"
+                    android:layout_height="wrap_content"/>
+        </FrameLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.v7.widget.AppCompatButton
+            style="@style/MainButton"
+            android:id="@+id/bt_continue"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="bottom"
+            android:text="Continue"/>
+
+</RelativeLayout>
